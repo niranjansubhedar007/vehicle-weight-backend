@@ -62,6 +62,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api", require("./apiRoute"));
+// app.use("/api", require("./apiRoute"));
 
 
 
