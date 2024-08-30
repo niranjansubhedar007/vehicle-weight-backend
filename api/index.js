@@ -61,8 +61,19 @@ app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
-app.use("/api", require("./apiRoute"));
-// app.use("/api", require("./apiRoute"));
+
+app.use("/api/admin", require("./routes/admin"));
+// app.use("/api/serial", require("./routes/serial"));
+app.use("/api/proxyLogin", require("./routes/proxyLogin"));
+app.use("/api/employeeLogin", require("./routes/employeeLogin"));
+app.use("/api/vehical", require("./routes/vehical"));
+app.use("/api/coustomer", require("./routes/coustomer"));
+app.use("/api/weight", require("./routes/weight"));
+app.use("/api/weightOutward", require("./routes/weightOutward"));
+app.use("/api/proxyWeight", require("./routes/proxyWeight"));
+app.use("/api/proxyWeightOutward", require("./routes/proxyWeightOutward"));
+app.use("/api/material", require("./routes/material"));
+app.use("/api/proxyMaterial", require("./routes/proxyMaterial"));
 
 
 
