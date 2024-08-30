@@ -2,19 +2,13 @@
 const express = require("express");
 const router = express.Router();
 
-
-router.use("/api/admin", require("./routes/admin"));
-// router.use("/api/serial", require("./routes/serial"));
-router.use("/api/proxyLogin", require("./routes/proxyLogin"));
-router.use("/api/employeeLogin", require("./routes/employeeLogin"));
-router.use("/api/vehical", require("./routes/vehical"));
-router.use("/api/coustomer", require("./routes/coustomer"));
-router.use("/api/weight", require("./routes/weight"));
-router.use("/api/weightOutward", require("./routes/weightOutward"));
-router.use("/api/proxyWeight", require("./routes/proxyWeight"));
-router.use("/api/proxyWeightOutward", require("./routes/proxyWeightOutward"));
-router.use("/api/material", require("./routes/material"));
-router.use("/api/proxyMaterial", require("./routes/proxyMaterial"));
+router.use("/admin", require("./admin"));
+router.use("/auth", require("./auth")); // proxyLogin and employeeLogin
+router.use("/weight", require("./weight")); // weight and weightOutward
+router.use("/proxyWeight", require("./proxyWeight")); // proxyWeight and proxyWeightOutward
+router.use("/material", require("./material")); // material and proxyMaterial
+router.use("/vehical", require("./vehical"));
+router.use("/coustomer", require("./coustomer"));
 
 
 module.exports = router;
