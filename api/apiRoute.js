@@ -11,4 +11,4 @@ router.use("/vehical", require("./vehical"));
 router.use("/coustomer", require("./coustomer"));
 
 
-module.exports = router;
+module.exports = router
