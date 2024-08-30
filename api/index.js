@@ -61,7 +61,7 @@ app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
-
+// Define your routes after applying CORS
 app.use("/api/admin", require("./routes/admin"));
 // app.use("/api/serial", require("./routes/serial"));
 app.use("/api/proxyLogin", require("./routes/proxyLogin"));
@@ -74,9 +74,6 @@ app.use("/api/proxyWeight", require("./routes/proxyWeight"));
 app.use("/api/proxyWeightOutward", require("./routes/proxyWeightOutward"));
 app.use("/api/material", require("./routes/material"));
 app.use("/api/proxyMaterial", require("./routes/proxyMaterial"));
-
-
-
 
 // Start the server
 app.listen(port, "0.0.0.0", () => {
