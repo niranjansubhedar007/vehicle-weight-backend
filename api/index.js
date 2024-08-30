@@ -61,29 +61,10 @@ app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
-// Define your routes after applying CORS
-// app.use("/api/admin", require("./routes/admin"));
-// // app.use("/api/serial", require("./routes/serial"));
-// app.use("/api/proxyLogin", require("./routes/proxyLogin"));
-// app.use("/api/employeeLogin", require("./routes/employeeLogin"));
-// app.use("/api/vehical", require("./routes/vehical"));
-// app.use("/api/coustomer", require("./routes/coustomer"));
-// app.use("/api/weight", require("./routes/weight"));
-// app.use("/api/weightOutward", require("./routes/weightOutward"));
-// app.use("/api/proxyWeight", require("./routes/proxyWeight"));
-// app.use("/api/proxyWeightOutward", require("./routes/proxyWeightOutward"));
-// app.use("/api/material", require("./routes/material"));
-// app.use("/api/proxyMaterial", require("./routes/proxyMaterial"));
+app.use("/api", require("./apiRoute"));
 
 
-app.use("/api/admin", require("./routes/admin"));
-// Combined routes
-app.use("/api/auth", require("./routes/auth")); // Includes proxyLogin and employeeLogin
-app.use("/api/weight", require("./routes/weight")); // Includes weight and weightOutward
-app.use("/api/proxyWeight", require("./routes/proxyWeight")); // Includes proxyWeight and proxyWeightOutward
-app.use("/api/material", require("./routes/material")); // Includes material and proxyMaterial
-app.use("/api/vehical", require("./routes/vehical"));
-app.use("/api/coustomer", require("./routes/coustomer"));
+
 
 // Start the server
 app.listen(port, "0.0.0.0", () => {
