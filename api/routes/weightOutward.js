@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const WeightOutward = require('../models/WeightOutward');
 const Vehical = require('../models/Vehical');
-const Material = require('../models/material');
+const Material = require('../models/Material');
 
 // Function to update isChecked field in Weight collection based on selectedMaterialName
 const updateIsChecked = async (selectedMaterialName) => {
