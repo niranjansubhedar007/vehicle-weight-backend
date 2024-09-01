@@ -46,7 +46,7 @@ const port = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "https://bhimrao-halwai-chikki.vercel.app", // Allow your frontend origin
+    origin: "https://vehicle-weight.vercel.app", // Allow your frontend origin
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // Allow credentials like cookies or headers
   })
