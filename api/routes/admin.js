@@ -24,6 +24,7 @@ router.post('/setup', async (req, res) => {
         if (existingAdmin) {
             return res.status(400).json({ message: 'Admin with the same username or email already exists' });
         }
+        console.log(existingAdmin);
 
         // Hash the plain password using bcryptjs
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -36,6 +37,8 @@ router.post('/setup', async (req, res) => {
         });
 
         // Save the admin to the database
+        console.log(newAdmin);
+        
         await newAdmin.save();
 
         return res.status(201).json({ message: 'Admin setup successful' });
