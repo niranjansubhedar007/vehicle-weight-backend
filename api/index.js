@@ -19,7 +19,7 @@ const port = process.env.PORT || 5000;
 // );
 
 const corsOption = {
-  origin: ["http://localhost:3000", "https://vehicle-weight.vercel.app"],
+  origin: ["http://localhost:3000", "http://localhost:3001",  "https://vehicle-weight.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   exposedHeaders: ["Content-Length"],

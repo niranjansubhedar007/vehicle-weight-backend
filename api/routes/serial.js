@@ -13,7 +13,7 @@ const { Router } = require('express')
 const router = express.Router()
 
 const serialPort = new SerialPort({ 
-    path: '/dev/ttyUSB0',
+    path: 'COM1',
     baudRate: 2400 ,
 })
 const parser = serialPort.pipe(new ReadlineParser({ delimiter: '\r\n' }))
