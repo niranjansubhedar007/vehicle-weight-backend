@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 
 const dbHost = process.env.DB_HOST;
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 // CORS configuration
 
